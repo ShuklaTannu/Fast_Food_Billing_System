@@ -1,0 +1,15 @@
+body{
+    background-image: url("file:///R:/image/food.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-attachment: fixed;
+
+}
+h1{
+
+        text-align: right bottom  100% 100%;
+        color:aquamarine;
+        font-style: italic;
+        font-size:larger 100%;
+}

@@ -1,0 +1,77 @@
+#img{
+    background-image: url(file:///R:/image/fastfood.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#menu {
+    padding: 25px 0 25px 0;
+}
+
+
+#section {
+    padding: 25px 0 25px 0;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Verdana;
+
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+#menu_row {
+    display: flex;
+    padding: 0 15px 0 50px;
+
+}
+
+#menu_col {
+    box-shadow: 2px 2px 2px aqua;
+    border: 1px solid aqua;
+    background-color:black;
+    margin: 10px;
+    padding: 10px;
+    flex: 1;
+}
+
+#menu_col h2 {
+    background-color: grey;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-family: cursive;
+}
+
+#image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid white;
+
+}
+
+#image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+h3{
+    color:aquamarine;
+}
+h4{
+    color:aquamarine;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+}

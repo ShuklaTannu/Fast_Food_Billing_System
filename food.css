@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    font-family: latha;
+    color: aliceblue;
+    background:linear-gradient(rgba(0, 0, 0, 0.80), rgba(0,0,0,0.80),rgba(0,0,0,0),rgba(0,0,0,0)),
+    url(file:///R:/image/junk.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom, 25% 25%;
+    background-attachment: fixed;
+}
+h1{
+    text-align: center;
+    color: green;
+    padding: 20px;
+}
+h4{
+    color: orangered;
+    text-align: left;
+
+}
+h3{
+    color: orangered;
+    padding: 10px;
+}
+nav{
+    background-color: black;
+    background-attachment: fixed;
+    border: 1px solid none;
+    display: grid;
+    place-items: center;
+}
+nav ul{
+    list-style-type: none;
+
+}
+nav ul a{
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in;
+    font-size: 18px;
+}
+nav ul a:hover{
+    background-color: green;
+    color: white;
+}
+.wd{
+    width: 300px;
+    height: 590px;
+    background-color: black;
+    opacity: 0.9;
+    padding: 0px;
+    background-attachment: fixed;
+}
+.wd h1{
+    text-align: top;
+    text-transform: uppercase;
+    font-weight: 100px;
+}
+.wd h4{
+    text-align: justify;
+    color: darkgrey;
+    font-weight: normal;
+}
+.wd h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px auto
+}
+.opt form, input[type="button"]{
+    background-color:grey;
+   color:white;
+    padding:10px;
+    margin:-14px auto;
+    padding :left 50px;
+    padding :right 50px;
+    text-align:center;
+}
+form, input[type="button"]:hover{
+    background-color: green;
+}

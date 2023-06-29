@@ -1,0 +1,24 @@
+*{
+    font-family: 'Poppings', sans-serif;
+
+}
+body{
+    background-image: url("file:///R:/image/ffff.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom, 25% 25%;
+    background-attachment: fixed;
+
+}
+.container{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px 0 25px;
+    color:bisque;
+    
+}
+h1{
+    text-align: center;
+    color:aquamarine;
+}

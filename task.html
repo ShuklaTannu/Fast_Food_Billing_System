@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IF=edge">
+        <link rel="stylesheet" href="task11.css">  
+        <meta name="viewflex" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1> Firefly Fast Food</h1>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="part1">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        Full Name: <input type="text" id="name" ><br><br>
+
+                        Your Email: <input type="text" id="email"> <br><br>
+                        Your Mobile : <input tyep="text" id="mobile"/> <br/>
+                    </fieldset>
+                </div>
+                <div class="part2">
+                    <fieldset>
+                        <legend>Your Order</legend>
+                        Pizza(Rs. 20): <input type="text" id="pizza"> <br><br>
+                        Fries(Rs. 50): <input type="text" id="fries"> <br><br>
+                        Sandwich(Rs. 70): <input type="text" id="sandwich"> <br><br>
+                        Desserts(Rs. 110): <input type="text" id="desserts"> <br><br>
+                        Drinks(Rs. 20): <input type="text" id="drinks"> <br><br>
+                        
+
+                    </fieldset>
+                </div>
+            </div>
+            <div class="container">
+                <fieldset>
+                    <legend>Your Bill</legend>
+                    <h3> Your Name: <span id="name2"></span> </h3>
+                    <h3> Email: <span id="email2"></span></h3>
+                    <h3> Mobile: <span id="mobile2"></span></h3>
+                    <table border="3">
+                            <thead>
+                            <tr><th>Menu</th><th>Price</th><th>Quality</th><th>Amout</th></tr>
+                           
+                        </thead>
+                        <tbody id="BillStatement"></tbody>
+                      </table>
+                </fieldset>
+                <h2> Total Amout: Rs. <span id="amount"> 0 </span></h2>
+            </div>
+        </div>
+        <script>
+            var Pizza_price= 180, Fries_price= 50, Sandwich_price= 70 , Desserts_price= 110, Drinks_price=20;
+            var Pizza_q = 0, Fries_q= 0, Sandwich_q= 0 , Desserts_q=0, Drinks_q=0;
+            var BillStatement= "";
+            var PizzaPriceShow= "", FriesPriceShow= "", SandwichPriceShow= "",DessertsPriceShow= "", DrinksPriceShow= "";
+            document.getElementById("name").addEventListener("keyup", function(){
+//name = this.value;
+document.getElementById("name2").innerHTML=this.value;
+//console.log(name);
+});
+
+document.getElementById("email").addEventListener("keyup", function(){
+//email = this.value;
+document.getElementById("email2").innerHTML= this.value;
+});
+document.getElementById("mobile").addEventListener("keyup", function(){
+//email = this.value;
+document.getElementById("mobile2").innerHTML= this.value;
+});
+document.getElementById("pizza").addEventListener("keyup", function(){
+    if(this.value==""||this.value==0){
+        PizzaPriceShow= "";
+        Pizza_q= 0;
+        showBill();
+    }else{
+
+    
+    Pizza_q = this.value ;
+    PizzaPriceShow= "<tr><th>Pizza</th><th>"+Pizza_price+"</th><th>"+Pizza_q+"</th><th>"+Pizza_price+"x"+Pizza_q+"= "+Pizza_price*Pizza_q+"</th></tr>";
+    showBill();
+    }
+});
+document.getElementById("fries").addEventListener("keyup", function(){
+    if(this.value==""||this.value==0){
+        FriesPriceShow="";
+        Fries_q= 0;
+        showBill();
+    }else{
+
+    
+    Fries_q = this.value ;
+    FriesPriceShow= "<tr><th>Fries</th><th>"+Fries_price+"</th><th>"+Fries_q+"</th><th>"+Fries_price+"x"+Fries_q+"= "+Fries_price*Fries_q+"</th></tr>";
+    showBill();
+}
+});
+document.getElementById("sandwich").addEventListener("keyup", function(){
+    if(this.value==""||this.value==0){
+        SandwichPriceShow="";
+        Sandwich_q = 0;
+        showBill();
+    }else{
+
+    
+    Sandwich_q = this.value ;
+    SandwichPriceShow= "<tr><th>Sandwich</th><th>"+Sandwich_price+"</th><th>"+Sandwich_q+"</th><th>"+Sandwich_price+"x"+Sandwich_q+"= "+Sandwich_price*Sandwich_q+"</th></tr>";
+    showBill();
+}
+});
+
+document.getElementById("desserts").addEventListener("keyup", function(){
+    if(this.value==""||this.value==0){
+        DessertsPriceShow="";
+        Desserts_q = 0;
+        showBill();
+    }else{
+
+    
+    Desserts_q = this.value ;
+    DessertsPriceShow= "<tr><th>Desserts</th><th>"+Desserts_price+"</th><th>"+Desserts_q+"</th><th>"+Desserts_price+"x"+Desserts_q+"= "+Desserts_price*Desserts_q+"</th></tr>";
+    showBill();
+}
+});
+
+
+document.getElementById("drinks").addEventListener("keyup", function(){
+    if(this.value==""||this.value==0){
+        DrinksPriceShow="";
+        Drinks_q = 0;
+        showBill();
+    }else{
+
+    
+        Drinks_q = this.value ;
+        DrinksPriceShow= "<tr><th>Drinks</th><th>"+Drinks_price+"</th><th>"+Drinks_q+"</th><th>"+Drinks_price+"x"+Drinks_q+"= "+Drinks_price*Drinks_q+"</th></tr>";
+    showBill();
+}
+});
+
+function showBill(){
+
+
+document.getElementById("BillStatement").innerHTML= PizzaPriceShow+FriesPriceShow+SandwichPriceShow+DessertsPriceShow+DrinksPriceShow;
+document.getElementById("amount").innerHTML= Pizza_price*Pizza_q+Fries_price*Fries_q+Sandwich_price*Sandwich_q+Desserts_price*Desserts_q+Drinks_price*Drinks_q;
+} 
+
+</script>
+<a href="connect.html"> submit</a>
+</body>
+</html>
+
